@@ -1,6 +1,8 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: lightcyan;
+    background-color: whitesmoke;
+          
+  
 }
 .navbar {
     display: flex;
@@ -18,8 +20,6 @@ body {
     
 
 #nav-links {
-    
-    
     text-decoration: none;
     color: black;
     font-size: 1em;    
@@ -36,49 +36,55 @@ a{
     margin: 5% 0;
     padding: 0 7%;
     display: flex;
+    align-items: center;
    
 }
 
+#intro p{
+    text-align: left;
+}
+
 #intro-text{
+    width: 100%;
+    margin: 10% 0;
     padding-right: 10%;
-    text-align: justify;
+    
 }
 
 .click{
     padding: 13px 30px;
-    background-color: hotpink;
+    background-color: #E02C6D;
+    font-weight: boldd ;
+    font-size: large;
     color: white;
     border-radius: 20px;
     cursor: pointer;
 }
 
-.click:hover{
-    font-size: larger;
-    background-color: indianred;
-    padding: 17px 35px;
-}
 
 .container{
     padding: 4% 10%;
     margin: 0 auto;
 }
-.container h3{
+.container h1{
     text-align: center;
+    font-size:xx-large
 }
 #card-wrapper{
     display: grid; 
     margin-top: 50px; 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
 }
 
 .card{
     /* max-width: 30%; */
-    
+    background-color: white;
     align-items: center;
     justify-content: center;
     padding: 10px 30px ;
     border: 1px solid black;
+    border: none;
     border-radius: 20px;
     box-shadow: 5px 5px 10px lightslategrey;
 }
@@ -88,6 +94,11 @@ a{
     align-items: center;
   
 }
+.img-main{
+    height: 50%;
+    width: 100%;
+}
+
 
 .rating img{
     margin-right: 20px
@@ -98,20 +109,43 @@ a{
 
 
 @media only screen and (max-width: 1000px) {
+    body{
+        max-width: 100%;
+        min-width: 100%;
+       
+    }
     #intro {
         margin: 15% 0;
+        padding: 0 7%;
+        display: flex;
+       flex-wrap: wrap;
         
     }
     #card-wrapper{
-        display: grid; 
+        display: flex; 
+        flex-wrap: wrap;
         margin-top: 50px; 
-        grid-template-columns: repeat(5, 1fr);
-        grid-gap: 1rem;
+        
     }
+    #bonus-section{
+        display: flex; 
+        flex-wrap: wrap;
+        align-items: center;
+        
+    }
+    
+    .bonus-text{
+        padding: 0 30px;
+    }
+    
     
 
 }
 @media only screen and (max-width: 600px) {
+    body{
+        max-width: 100%;
+        min-width: 100%;
+    }
     #intro {
         margin: 15% 0;
         padding: 0 7%;
@@ -119,12 +153,90 @@ a{
        flex-wrap: wrap;
     }
     #card-wrapper{
+       
+        margin-top: 50px; 
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .click{
+        font-size:small;
+        border: none;
+        outline: none;
+    }
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 7%;
+        margin: 5% 0;
+    }
+    .navbar article{
+        font-weight: bolder;
+        background-color: lightsteelblue;
+        padding: 2%;
+        border-radius: 20px;
+        margin-bottom: 30px;
+        font-size: 2rem;
+    }
+    #card-wrapper{
         display: flex; 
         flex-wrap: wrap;
         margin-top: 50px; 
-        /* grid-template-columns: repeat(11, 1fr); */
-        /* grid-gap: 2rem; */
+        
+    }
+    #bonus-section{
+        display: flex; 
+        flex-wrap: wrap;
+        align-items: center;
     }
     
 
 }
+
+#bonus-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* align-items: center; */
+}
+
+.bonus-text{
+    padding: 0 30px;
+}
+
+#footer{
+    background-color: #0A0826;
+    padding: 5% 20%;
+    color: white;
+    text-align: center;
+}
+.footer-logo{
+    margin: 2% 8%;
+    padding: 0 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* animation */
+
+.animation {
+    width: 160px;
+    height: 70px;
+    padding:20px 60px;
+    text-align: center;
+    border-radius: 30px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:600px;  top:0px;}
+    75%  {background-color:green; left:900px;  top:0px;}
+    100% {background-color:red; left:1200px; top:0px;}
+  }
