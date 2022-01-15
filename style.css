@@ -12,8 +12,6 @@ body {
 }
 .navbar article{
     font-weight: bolder;
-    background-color: lightsteelblue;
-    padding: 2%;
     border-radius: 20px;
     font-size: 2rem;
 }
