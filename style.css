@@ -1,0 +1,130 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: lightcyan;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7%;
+    margin: 5% 0;
+}
+.navbar article{
+    font-weight: bolder;
+    background-color: lightsteelblue;
+    padding: 2%;
+    border-radius: 20px;
+    font-size: 2rem;
+}
+    
+
+#nav-links {
+    
+    
+    text-decoration: none;
+    color: black;
+    font-size: 1em;    
+    font-weight: bolder;
+
+}
+a{
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+#intro {
+    margin: 5% 0;
+    padding: 0 7%;
+    display: flex;
+   
+}
+
+#intro-text{
+    padding-right: 10%;
+    text-align: justify;
+}
+
+.click{
+    padding: 13px 30px;
+    background-color: hotpink;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.click:hover{
+    font-size: larger;
+    background-color: indianred;
+    padding: 17px 35px;
+}
+
+.container{
+    padding: 4% 10%;
+    margin: 0 auto;
+}
+.container h3{
+    text-align: center;
+}
+#card-wrapper{
+    display: grid; 
+    margin-top: 50px; 
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.card{
+    /* max-width: 30%; */
+    
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px ;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px lightslategrey;
+}
+.rating{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  
+}
+
+.rating img{
+    margin-right: 20px
+}
+.text-muted{
+   color: black;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #intro {
+        margin: 15% 0;
+        
+    }
+    #card-wrapper{
+        display: grid; 
+        margin-top: 50px; 
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 1rem;
+    }
+    
+
+}
+@media only screen and (max-width: 600px) {
+    #intro {
+        margin: 15% 0;
+        padding: 0 7%;
+        display: flex;
+       flex-wrap: wrap;
+    }
+    #card-wrapper{
+        display: flex; 
+        flex-wrap: wrap;
+        margin-top: 50px; 
+        /* grid-template-columns: repeat(11, 1fr); */
+        /* grid-gap: 2rem; */
+    }
+    
+
+}
